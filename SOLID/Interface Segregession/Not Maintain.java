@@ -9,10 +9,13 @@ package oop.solid;
 
 interface Animal {
 	void feed();
+}
+
+interface Peet extends Animal {
 	void groom();
 }
 
-class Dog implements Animal{
+class Dog implements Peet{
 	public void feed() {
 		System.out.println("Dog feeding..");
 	}
@@ -26,10 +29,7 @@ class Tiger implements Animal {
 	public void feed() {
 		System.out.println("Tiger feeding..");
 	}
-	//Tiger is not grooming. we need to dummy implementation just because of compiler happy.
-	public void groom() {
-		
-	}
+	
 }
 public class InterfaceSegregession {
 
